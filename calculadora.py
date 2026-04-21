@@ -13,3 +13,8 @@ def multiplicacao(a, b):
     return a * b
 
 print(f"Multiplicação: {multiplicacao(10, 5)}")
+
+def subtracao(a, b):
+    return a - b
+
+print(f"Subtração: {subtracao(10, 5)}")
