@@ -18,3 +18,10 @@ def subtracao(a, b):
     return a - b
 
 print(f"Subtração: {subtracao(10, 5)}")
+
+# Calculadora Finalizada para o projeto de DevOps
+def calculadora(a, b, operacao):
+    if operacao == "+": return a + b
+    if operacao == "/": return a / b
+    if operacao == "*": return a * b
+    if operacao == "-": return a - b
