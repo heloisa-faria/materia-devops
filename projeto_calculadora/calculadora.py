@@ -13,7 +13,6 @@ def multiplicacao(a, b):
 def subtracao(a, b):
     return a - b
 
-# Calculadora Finalizada para o projeto de DevOps
 def calculadora(a, b, operacao):
     if operacao == "+": return somar(a,b)
     if operacao == "/": return divisao(a, b)
