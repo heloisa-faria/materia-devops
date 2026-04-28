@@ -14,7 +14,7 @@ def subtracao(a, b):
     return a - b
 
 def calculadora(a, b, operacao):
-    if operacao == "+": return somar(a,b)
-    if operacao == "/": return divisao(a, b)
-    if operacao == "*": return multiplicacao(a, b)
-    if operacao == "-": return subtracao(a, b)
+    if operacao in ["+", "soma"]: return somar(a, b)
+    if operacao in ["-", "subtracao"]: return subtracao(a, b)
+    if operacao in ["*", "multiplicacao"]: return multiplicacao(a, b)
+    if operacao in ["/", "divisao"]: return divisao(a, b)
