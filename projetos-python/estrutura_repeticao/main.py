@@ -9,7 +9,7 @@ async def inicio():
 
 @app.get("/filtrar")
 async def filtrar(frase: str):
-    # API recebe o texto pela URL e manda para a logica
+    # API que recebe o texto pela URL
     resultado = informar_vogais(frase)
     return {
         "entrada": frase,
