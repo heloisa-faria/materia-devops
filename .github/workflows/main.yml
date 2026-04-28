@@ -1,15 +1,17 @@
 name: Python CI
 
-on: [push] 
-# usar o push para ativar 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ] 
 
 jobs:
   build:
-    # abre o linux virtualmente
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4 
+    - uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -23,6 +25,6 @@ jobs:
 
     - name: Run Tests
       run: |
-        # entra em cada uma daa pasta e roda o pytest
+        # entra nas pastas
         cd Projetos_Python/projeto_calculadora && pytest
         cd ../estrutura_repeticao && pytest
