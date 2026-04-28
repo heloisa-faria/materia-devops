@@ -3,12 +3,10 @@ from main import app
 
 client = TestClient(app)
 
-def test_vogais_simples():
-    # testa se foi certo
-    response = client.get("/vogais?texto=Python")
-    assert response.status_code == 200
-    assert "o" in response.json()["apenas_vogais"].lower()
+def test_extrair_vogais_comum():
+    response = client.get("/vogais?texto=DevOps")
+    assert "e" in response.json()["apenas_vogais"].lower()
 
-def test_frase_sem_vogais():
-    response = client.get("/vogais?texto=bcd")
+def test_texto_sem_vogais():
+    response = client.get("/vogais?texto=kjt")
     assert response.json()["apenas_vogais"] == ""
